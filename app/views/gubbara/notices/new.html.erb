@@ -1,0 +1,11 @@
+<div class="notice">
+  <h3>Add new notice</h3>
+  <%= form_for @notice, url: notices_create_path do |f| %>
+      <div class="form-group">
+        <%= f.text_field :message, class: 'form-control', placeholder: 'Write a notice' %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Place Notice', class: 'btn btn-default' %>
+      </div>
+  <% end %>
+</div>
