@@ -11,17 +11,17 @@ module Gubbara
       redirect_to :back
     end
 
-    def notice_params
-      params.require(:notice).permit(:message)
-    end
-
     def hide
-      @notice_id = params[:id]
-      session[:hidden_notices].push(@notice_id)
+      session[:hidden_notices] ||= []
+      session[:hidden_notices].push(params[:id])
     end
 
     def close
       current_user.user_notices.create(notice_id: params[:id])
+    end
+    private
+    def notice_params
+      params.require(:notice).permit(:message)
     end
   end
 end

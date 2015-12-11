@@ -1,7 +1,9 @@
 <div class="notices">
   <ul>
-    <% Gubbara::Notice.all.each do |user_notice| %>
-        <li><%= render partial: 'gubbara/application/notice', locals: {user_notice: user_notice} %></li>
+    <% if @notices %>
+        <% @notices.each do |user_notice| %>
+            <li><%= render partial: 'gubbara/application/notice', locals: {user_notice: user_notice} %></li>
+        <% end %>
     <% end %>
   </ul>
 </div>

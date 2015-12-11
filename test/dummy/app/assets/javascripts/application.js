@@ -12,3 +12,5 @@
 //
 //= require gubbara/application
 //= require_tree .
+//= require jquery
+//= require jquery_ujs

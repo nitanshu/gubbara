@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     gubbara (0.0.1)
-      rails (~> 4.1.10)
+      rails
 
 GEM
   remote: https://rubygems.org/
@@ -37,6 +37,9 @@ GEM
     builder (3.2.2)
     erubis (2.7.0)
     i18n (0.7.0)
+    jquery-rails (3.1.4)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
     json (1.8.3)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
@@ -78,6 +81,7 @@ PLATFORMS
 
 DEPENDENCIES
   gubbara!
+  jquery-rails
   sqlite3
 
 BUNDLED WITH

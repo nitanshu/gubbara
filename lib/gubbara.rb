@@ -1,12 +1,6 @@
 require "gubbara/engine"
 require "gubbara/railtie"
-
+# Put your global configuration here...
 module Gubbara
-  class Notice< ActiveRecord::Base
-
-  end
-
-  class UserNotice < ActiveRecord::Base
-
-  end
+  mattr_accessor :user_class
 end

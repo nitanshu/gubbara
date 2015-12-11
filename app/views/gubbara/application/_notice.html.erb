@@ -1,8 +1,8 @@
-<div class="notice_panel notice" style="color: #730E15">
+<div class="notice_panel notice_<%= user_notice.id %>" style="color: #730E15">
   <p><%= user_notice.message %></p>
 
   <div class="buttons">
-    <%= link_to 'hide', gubbara.notices_hide_path, title: 'Hide the notice', remote: true %>
-    <%= link_to 'close', gubbara.notices_close_path, title: 'Close the notice', remote: true %>
+    <%= link_to 'hide', gubbara.hide_notice_path(user_notice), method: :post, remote: true, title: 'Hide the notice' %>
+    <%= link_to 'close', gubbara.close_notice_path(user_notice), method: :post, remote: true, title: 'Close the notice' %>
   </div>
 </div>

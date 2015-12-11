@@ -1,9 +1,10 @@
 Gubbara::Engine.routes.draw do
-  get 'notices/new'
+  root "notices#index"
 
-  post 'notices/create'
-
-  post 'notices/hide'
-
-  post 'notices/close'
+  resources :notices , only: [:new, :create] do
+    member do
+      post 'hide'
+      post 'close'
+    end
+  end
 end
