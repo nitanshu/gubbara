@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116131427) do
+ActiveRecord::Schema.define(version: 20151217061526) do
+
+  create_table "gubbara_join_models", force: true do |t|
+    t.string   "notice_id"
+    t.string   "integer"
+    t.string   "model_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "gubbara_notices", force: true do |t|
     t.string   "message"
@@ -20,6 +28,13 @@ ActiveRecord::Schema.define(version: 20151116131427) do
   end
 
   create_table "tests", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
