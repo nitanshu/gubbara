@@ -2,5 +2,5 @@ require "gubbara/engine"
 require "gubbara/railtie"
 # Put your global configuration here...
 module Gubbara
-  mattr_accessor :user_class
+  mattr_accessor :model_class
 end
