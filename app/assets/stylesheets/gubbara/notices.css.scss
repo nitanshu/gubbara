@@ -1,0 +1,35 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.notices {
+  left: 0;
+  margin-top: 57px;
+  width: 100%;
+  li {
+    margin-bottom: 5px;
+    .notice_panel {
+      background-color: #ffff66;
+      padding: 6px;
+      position: relative;
+      p {
+        color: #444;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 0;
+        width: 95%;
+        text-align: center;
+        word-break: break-all;
+      }
+      .buttons {
+        padding-right: 20px;
+        position: absolute;
+        top: 6px;
+        right: 0;
+        .hide_button {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
