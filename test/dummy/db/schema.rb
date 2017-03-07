@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217061526) do
+ActiveRecord::Schema.define(version: 20170307072319) do
 
   create_table "gubbara_join_models", force: true do |t|
     t.string   "notice_id"
@@ -25,16 +25,10 @@ ActiveRecord::Schema.define(version: 20151217061526) do
     t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "active",     default: true
   end
 
   create_table "tests", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

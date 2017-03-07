@@ -2,7 +2,12 @@
   <h3>Add new notice</h3>
   <%= form_for @notice do |f| %>
       <div class="form-group">
+        <%= f.label :message %>
         <%= f.text_field :message, class: 'form-control', placeholder: 'Write a notice' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :active%>
+        <%= f.check_box :active, class: 'form-control' %>
       </div>
       <div class="actions">
         <%= f.submit 'Place Notice', class: 'btn btn-default' %>

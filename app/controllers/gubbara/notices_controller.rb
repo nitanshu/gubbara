@@ -6,9 +6,17 @@ module Gubbara
       @notice = Gubbara::Notice.new
     end
 
+    def index
+      @notices = Gubbara::Notice.all
+    end
+
     def create
       @notice = Gubbara::Notice.create(notice_params)
       redirect_to :back
+    end
+
+    def edit
+      
     end
 
     def hide
@@ -21,7 +29,7 @@ module Gubbara
     end
     private
     def notice_params
-      params.require(:notice).permit(:message)
+      params.require(:notice).permit(:message, :active)
     end
   end
 end

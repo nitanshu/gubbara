@@ -1,0 +1,7 @@
+<h4>All Notices !! </h4>
+
+<% @notices.all.each do |notice| %>
+    <b>id</b>: <%= notice.id %>
+    <b>message</b>: <%= notice.message %>
+    <b>active</b>: <%= notice.active %><br/>
+<% end %>
