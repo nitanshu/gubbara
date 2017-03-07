@@ -6,7 +6,7 @@ Gubbara is a gem for providing notice on board for all the users who visits the 
 
 Add this line to your application's Gemfile:
 
-<tt>gem 'gubbara' </tt>
+<tt>gem 'gubbara'</tt>
 
 And then execute:
 
@@ -16,7 +16,7 @@ And then execute:
 
 To use this gem you just need to mount it in your route file *config/routes.rb*
 
-<tt> mount Gubbara::Engine => '/gubbara' </tt>
+<tt>mount Gubbara::Engine => '/gubbara'</tt>
 
 Then to go to the dashboard hit the url as:
 
@@ -24,10 +24,10 @@ your_application_url */gubbara/notices/new*
 
 ==  Hide
 
-When a user clicks on the cross button it hides the template for that session and will not show `until` the session will not expire.
+When a user clicks on the cross button it hides the template for that session and will not show until the session will not expire.
 
 == Admin Accesss
 
-The admin who will create the notice for all the users will be able to configure 'background color' and 'font color' for a particulare notice.
+The admin who will create the notice for all the users will be able to configure *background color* and *font color* for a particulare notice.
 
 It also can disable the notice when notice will not be needed any more.
