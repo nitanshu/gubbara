@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+.cross_button{
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+}
+.cross_button:hover{
+    text-decoration:none;
+    color:#fff;
+}
