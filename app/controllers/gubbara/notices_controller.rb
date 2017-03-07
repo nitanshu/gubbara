@@ -2,6 +2,9 @@ require_dependency "gubbara/application_controller"
 
 module Gubbara
   class NoticesController < ApplicationController
+
+    before_action :find_notice, only: [:edit, :update]
+
     def new
       @notice = Gubbara::Notice.new
     end
@@ -16,7 +19,11 @@ module Gubbara
     end
 
     def edit
-      
+    end
+
+    def update
+      @notice.update(notice_params)
+      redirect_to :back
     end
 
     def hide
@@ -27,7 +34,13 @@ module Gubbara
     def close
       current_user.user_notices.create(notice_id: params[:id])
     end
+
     private
+
+    def find_notice
+      @notice =  Gubbara::Notice.where(id: params[:id]).take
+    end
+
     def notice_params
       params.require(:notice).permit(:message, :active)
     end

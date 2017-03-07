@@ -1,7 +1,7 @@
 Gubbara::Engine.routes.draw do
   root "notices#index"
 
-  resources :notices , only: [:new, :create] do
+  resources :notices do
     member do
       post 'hide'
       post 'close'

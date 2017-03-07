@@ -4,4 +4,6 @@
     <b>id</b>: <%= notice.id %>
     <b>message</b>: <%= notice.message %>
     <b>active</b>: <%= notice.active %><br/>
+
+    <b>edit</b>: <%= link_to 'edit', edit_notice_path(notice) %>
 <% end %>
