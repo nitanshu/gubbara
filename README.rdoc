@@ -10,7 +10,15 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-<tt>$ bundle</tt>
+<tt>$ bundle install</tt>
+
+Install migrations:
+
+<tt>$ rake gubbara:install:migrations</tt>
+
+Migrate:
+
+<tt>$ rails db:migrate</tt>
 
 == Usage
 
