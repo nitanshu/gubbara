@@ -1,4 +1,4 @@
-<div class="notices" style="background: #0275d8; width: 100%; position: relative; float: left; clear: both; padding: 10px 10px; text-align: center; font-size: 20px; line-height: normal;">
+<div class="notices">
     <% if @notices %>
         <% @notices.each do |user_notice| %>
             <%= render partial: 'gubbara/application/notice', locals: {user_notice: user_notice} %>
