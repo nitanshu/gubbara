@@ -1,9 +1,15 @@
 <h4>All Notices !! </h4>
 
 <% @notices.all.each do |notice| %>
-    <b>id</b>: <%= notice.id %>
-    <b>message</b>: <%= notice.message %>
+    <b>id</b>: <%= notice.id %><br/>
+    <b>message</b>: <%= notice.message %><br/>
     <b>active</b>: <%= notice.active %><br/>
+    <b>background_color</b>: <%= notice.background_color %><br/>
+    <b>font_color</b>: <%= notice.font_color %><br/>
+    <b>font_size</b>: <%= notice.font_size %><br/>
+    <b>text_align</b>: <%= notice.text_align %><br/>
 
-    <b>edit</b>: <%= link_to 'edit', edit_notice_path(notice) %>
+    <b>edit</b>: <%= link_to 'edit', edit_notice_path(notice) %><br/>
+    <br/>
+    <br/>
 <% end %>

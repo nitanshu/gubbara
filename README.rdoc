@@ -43,6 +43,6 @@ When a user clicks on the cross button it hides the template for that session an
 
 == Admin Accesss
 
-The admin who will create the notice for all the users will be able to configure *background_color*, *font_color*, *font_size* and *text_allignment* for a particulare notice.
+The admin who will create the notice for all the users will be able to configure *background_color*, *font_color*, *font_size* and *text_alignment* for a particulare notice.
 
 It also can disable the notice when notice will not be needed any more.
