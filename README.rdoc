@@ -26,9 +26,16 @@ To use this gem you just need to mount it in your route file *config/routes.rb*
 
 <tt>mount Gubbara::Engine => '/gubbara'</tt>
 
+Place this helper method in any layout or any view page where you want to place your notice.
+
+example: place this in '_header' file
+
+<tt><%= list_notices %></tt>
+
 Then to go to the dashboard hit the url as:
 
 your_application_url */gubbara/notices/new*
+
 
 ==  Hide
 
