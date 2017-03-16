@@ -28,7 +28,7 @@ To use this gem you just need to mount it in your route file *config/routes.rb*
 
 Place this helper method in any layout or any view page where you want to place your notice.
 
-example: place this in '_header' file
+example: place this in *app/views/layouts/application.html.erb* file
 
 <tt><%= list_notices %></tt>
 
