@@ -4,7 +4,6 @@ Gubbara::Engine.routes.draw do
   resources :notices do
     member do
       post 'hide'
-      post 'close'
     end
   end
 end

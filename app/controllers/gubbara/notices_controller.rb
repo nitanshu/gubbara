@@ -31,10 +31,6 @@ module Gubbara
       session[:hidden_notices].push(params[:id])
     end
 
-    def close
-      current_user.user_notices.create(notice_id: params[:id])
-    end
-
     private
 
     def find_notice
