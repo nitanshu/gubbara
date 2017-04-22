@@ -4,7 +4,7 @@
   <title>Gubbara</title>
   <%= stylesheet_link_tag    "gubbara/application", media: "all" %>
   <%= javascript_include_tag "gubbara/application" %>
-  <%#= csrf_meta_tags %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render partial: 'notices', locale: {user_notices: @user_notices}  if @user_notices %>
