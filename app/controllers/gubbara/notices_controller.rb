@@ -3,7 +3,7 @@ require_dependency "gubbara/application_controller"
 module Gubbara
   class NoticesController < ApplicationController
 
-    before_action :find_notice, only: [:edit, :update]
+    before_action :find_notice, only: [:edit, :update, :destroy]
 
     def new
       @notice = Gubbara::Notice.new
@@ -15,7 +15,7 @@ module Gubbara
 
     def create
       @notice = Gubbara::Notice.create(notice_params)
-      redirect_to :back
+      redirect_to root_path
     end
 
     def edit
@@ -23,7 +23,12 @@ module Gubbara
 
     def update
       @notice.update(notice_params)
-      redirect_to :back
+      redirect_to root_path
+    end
+
+    def destroy
+      @notice.destroy
+      redirect_to root_path
     end
 
     def hide

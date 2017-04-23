@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <div class="panel-heading text-center">All Notices !!</div>
+  <div class="panel-heading text-center"> <%= link_to 'New Notice', new_notice_path , class: 'pull-right'%> All Notices</div>
   <table class="table">
     <thead>
     <tr>
@@ -24,7 +24,8 @@
           <td><%= notice.font_color %></td>
           <td><%= notice.font_size %></td>
           <td><%= notice.text_align %></td>
-          <td><%= link_to 'Edit', edit_notice_path(notice) %></td>
+          <td><%= link_to 'Edit', edit_notice_path(notice) %>
+          <%= link_to 'Delete', notice, action: :delete,  method: :delete %></td>
         </tr>
     <% end %>
     </tbody>
