@@ -1,0 +1,47 @@
+<%= form_for @notice, html: {class: 'form-horizontal'} do |f| %>
+    <div class="form-group">
+      <%= f.label :message, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :message, class: 'form-control', placeholder: 'Write a notice' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :background_color, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :background_color, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :font_color, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :font_color, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :font_size, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :font_size, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :text_align, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :text_align, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :active, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.check_box :active %>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="col-sm-offset-4 col-sm-4">
+        <% if params[:action] == 'edit' %>
+            <%= f.submit 'Edit Notice', class: 'btn btn-default' %>
+        <% else %>
+            <%= f.submit 'Place Notice', class: 'btn btn-default' %>
+        <% end %>
+      </div>
+    </div>
+<% end %>

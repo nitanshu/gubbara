@@ -1,32 +1,8 @@
 <div class="notice">
-  <h3>Edit notice</h3>
-  <%= form_for @notice do |f| %>
-      <div class="form-group">
-        <%= f.label :message %>
-        <%= f.text_field :message, class: 'form-control', placeholder: 'Write a notice' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :background_color %>
-        <%= f.text_field :background_color, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :font_color %>
-        <%= f.text_field :font_color, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :font_size %>
-        <%= f.text_field :font_size, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :text_align %>
-        <%= f.text_field :text_align, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :active%>
-        <%= f.check_box :active, class: 'form-control' %>
-      </div>
-      <div class="actions">
-        <%= f.submit 'Place Notice', class: 'btn btn-default' %>
-      </div>
-  <% end %>
+  <div class="page-header">
+    <h1 class="text-center">
+      <small>Edit notice</small>
+    </h1>
+  </div>
+  <%= render 'form' %>
 </div>
