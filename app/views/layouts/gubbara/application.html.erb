@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render partial: 'notices', locale: {user_notices: @user_notices}  if @user_notices %>
+<%= render partial: 'layouts/gubbara/notices', locale: {user_notices: @user_notices}  if @user_notices %>
 
 <%= yield %>
 
