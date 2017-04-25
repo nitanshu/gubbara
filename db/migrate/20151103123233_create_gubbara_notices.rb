@@ -8,6 +8,7 @@ class CreateGubbaraNotices < ActiveRecord::Migration
       t.string :font_size, default: '20px'
       t.string :text_align, default: 'center'
       t.string :cross_button_color, default: '#ffffff'
+      t.string :z_index, default: '9999'
 
       t.timestamps
     end

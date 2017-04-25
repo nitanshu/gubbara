@@ -43,7 +43,7 @@ module Gubbara
     end
 
     def notice_params
-      params.require(:notice).permit(:message, :active, :background_color, :font_color, :font_size, :text_align, :cross_button_color)
+      params.require(:notice).permit(:message, :active, :background_color, :font_color, :font_size, :text_align, :cross_button_color, :z_index)
     end
   end
 end

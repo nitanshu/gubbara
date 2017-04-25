@@ -1,5 +1,6 @@
-<div class="notice_panel notice_<%= user_notice.id %>" style="background: <%= user_notice.background_color %>; width: 100%; position: relative; float: left; clear: both; padding: 10px 10px; text-align: <%= user_notice.text_align %>; font-size: <%= user_notice.font_size %>; line-height: normal;">
+<div class="notice_panel notice_<%= user_notice.id %>" style="background: <%= user_notice.background_color %>; width: 100%; position: relative; float: left; clear: both; padding: 10px 10px; text-align: <%= user_notice.text_align %>; font-size: <%= user_notice.font_size %>; z-index: <%= user_notice.z_index %>; line-height: normal;">
   <p style="margin: 0px; padding: 0px; line-height: normal; color: <%= user_notice.font_color%>;"><%= user_notice.message %></p>
-    <div style="position: absolute; top: 8px; color: #ffffff; font-size: 14px; right: 15px; z-index: 101;"><%= link_to 'X', gubbara.hide_notice_path(user_notice), method: :post, remote: true, title: 'X', class: 'cross_button', style: "color: #{user_notice.cross_button_color};" %></div>
+
+  <div style="position: absolute; top: 8px; color: #ffffff; font-size: 14px; right: 15px; z-index: 101;"><%= link_to 'X', gubbara.hide_notice_path(user_notice), method: :post, remote: true, title: 'X', class: 'cross_button', style: "color: #{user_notice.cross_button_color};" %></div>
 </div>
 
