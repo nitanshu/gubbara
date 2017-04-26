@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ['nitanshu1991@gmail.com']
   s.homepage    = 'https://github.com/nitanshu/gubbara'
   s.summary     = 'Gubbara'
-  s.description = 'It shows the placed notice from admin and if cross button clicked then it will not appear until the session expires.'
+  s.description = 'It helps admin to announce anything to every user in the system in a form of a notice which is configurable also every user has an option to hide it and will not appear till session expires or disabled by admin.'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']

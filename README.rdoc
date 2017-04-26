@@ -1,6 +1,6 @@
 = Gubbara
 
-Gubbara is a gem for providing notice on board for all the users who visits the site. It has all the configuration for the particular notice you can provide 'background color' and 'font color'.
+It helps admin to announce anything to every user in the system in a form of a notice which is configurable also every user has an option to hide it and will not appear till session expires or disabled by admin.
 
 == Installation
 
@@ -18,7 +18,7 @@ Install migrations:
 
 Migrate:
 
-<tt>$ rails db:migrate</tt>
+<tt>$ rake db:migrate</tt>
 
 == Usage
 
@@ -32,17 +32,19 @@ example: place this in *app/views/layouts/application.html.erb* file
 
 <tt><%= list_notices %></tt>
 
-Then to go to the dashboard hit the url as:
-
-your_application_url */gubbara/notices/new*
-
-
 ==  Hide
 
-When a user clicks on the cross button it hides the template for that session and will not show until the session will not expire.
+When a user clicks on the cross button it hides the template for that session and will not show till the session expires or disabled by admin.
 
 == Admin Accesss
 
-The admin who will create the notice for all the users will be able to configure *background_color*, *font_color*, *font_size*, *text_alignment* and even *cross_button_color* for a particulare notice.
+You can access 'Gubbara Admin Panel'.
+
+Please ensure that only admin can access this gubbara panel to do that you can use *http_basic_authenticate_with*.
+
+== Configuration
+
+You can configure *background_color*, *font_color*, *font_size*, *text_alignment*, *z_index* and even *cross_button_color* of that notice.
 
 It also can disable the notice when notice will not be needed any more.
+
