@@ -9,3 +9,5 @@ test/dummy/.sass-cache
 .idea/
 test/dummy/**/*
 test/*
+
+gubbara-*.*.*.gem
