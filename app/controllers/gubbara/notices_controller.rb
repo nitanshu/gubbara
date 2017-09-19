@@ -2,7 +2,7 @@ require_dependency "gubbara/application_controller"
 
 module Gubbara
   class NoticesController < ApplicationController
-
+    skip_filter *_process_action_callbacks.map(&:filter), :only => [:hide]
     before_action :find_notice, only: [:edit, :update, :destroy]
 
     def new
