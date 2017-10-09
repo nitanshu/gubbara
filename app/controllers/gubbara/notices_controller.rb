@@ -32,19 +32,13 @@ module Gubbara
     end
 
     def hide
-      logger.info "------------#{cookies.inspect}-------"
       if @notice.base == 'session'
-        puts "--------------in the session"
         session[:hidden_notices] ||= []
         session[:hidden_notices].push(@notice.id)
       else
-        puts "-0---------cookies ------------#{cookies[:hidden_public_notices]}--------"
         cookies[:hidden_public_notices] ||= ''
         cookies[:hidden_public_notices] += " #{@notice.id.to_s}"
-        puts "-0---------cookies ------------#{cookies[:hidden_public_notices]}--------"
       end
-      puts "-0---------cookies -------split-----#{cookies[:hidden_public_notices].split}--------"
-      puts "-1---------session ----------------#{session[:hidden_notices]}===="
     end
 
     private
