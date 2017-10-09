@@ -36,8 +36,9 @@ module Gubbara
         session[:hidden_notices] ||= []
         session[:hidden_notices].push(@notice.id)
       else
-        cookies[:hidden_public_notices] ||= ''
-        cookies[:hidden_public_notices] += " #{@notice.id.to_s}"
+        cookies.permanent[:hidden_public_notices] ||= ''
+        cookies[@notice.id.to_s] = {value: @notice.id.to_s, expires: 1.year.from_now}
+        cookies.permanent[:hidden_public_notices] += " #{@notice.id.to_s}"
       end
     end
 
