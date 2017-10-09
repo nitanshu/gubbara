@@ -61,6 +61,14 @@ You can configure *background_color*, *font_color*, *font_size*, *text_alignment
 
 It also can disable the notice when notice will not be needed any more.
 
+=== Disable 
+
+You can disable the announcement from the admin panel when you don't want your users to see that announcement anymore.
+
+=== Html Parsing
+
+You can even put your complete html in the text field and the output would be html parsed announcement.
+
 === Hide
 
 ==== Session
