@@ -1,7 +1,9 @@
 = Gubbara
 
-It helps admin to announce anything to every user in the system in a form of a notice which is configurable also every user has an option to hide it and will not appear till session expires or disabled by admin.
-
+It helps admin to announce something in a form a notice.It consists two types of announcements:
+  - Session Based: Only for logged in users.(Application Layout)
+  - Cookie Based: For all users visting the website.(Public Layout)
+  
 == Installation
 
 Add this line to your application's Gemfile:
@@ -26,34 +28,44 @@ To use this gem you just need to mount it in your route file *config/routes.rb*
 
 <tt>mount Gubbara::Engine => '/gubbara'</tt>
 
-Place this helper method in any layout or any view page where you want to place your notice.
+Place the helper method according to your requirement in any layout or any view page where you want to place your notice.
 
-example: place this in *app/views/layouts/application.html.erb* file
+=== Session Based Announcements
 
-<tt><%= list_notices %></tt>
+For session based announcements place this helper method in the layout which is not publicly accessible.
 
-==  Hide
+example: place this in *app/views/layouts/application.html.erb* file.
 
-When a user clicks on the cross button it hides the template for that session and will not show till the session expires or disabled by admin.
+<tt><%= user_announcements %></tt>
 
-== Admin Accesss
+=== Cookie Based Announcements
+
+For cookie based announcements place this helper method in the layout which is publicly accessible.
+
+example: place this in *app/views/layouts/public.html.erb* file.
+
+<tt><%= public_announcements %></tt>
+
+==  Features
+
+=== Admin Panel
 
 You can access 'Gubbara Admin Panel'.
 
-Please ensure that only admin can access this gubbara panel to do that you can use *http_basic_authenticate_with*.
+Please ensure that only admin can access this gubbara panel to do that you can use *http_basic_authenticate_with* or some other methods to prevent that url.
 
-== Configuration
+=== Configuration
 
 You can configure *background_color*, *font_color*, *font_size*, *text_alignment*, *z_index* and even *cross_button_color* of that notice.
 
 It also can disable the notice when notice will not be needed any more.
 
-== Note
+=== Hide
 
-=== Session Based Announcement
-If you are using session based announcement or the announcement that you only want to show to the logged in users.
-Please do not put <tt><%= list_notices %></tt> in the public layout.
+==== Session
 
-=== Cookie Based Announcement
-If you are using cookie based annoucement which you want to show to all anonymous users visting the site not the logged
-in users. Please put <tt><%= list_notices %></tt> in the public layout.
+When a user clicks on the cross button it hides the template for that session and will not show till the session expires or disabled by admin.
+
+==== Cookie
+
+When a user clicks on the cross button it hides the template and user will not be able to see that annoucement again on that broswer because cookies are permanent and also the expiry date of cookies are 1 year. 
