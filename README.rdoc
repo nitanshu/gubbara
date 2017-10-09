@@ -1,8 +1,9 @@
 = Gubbara
 
 It helps admin to announce something in a form a notice.It consists two types of announcements:
-  - Session Based: Only for logged in users.(Application Layout)
-  - Cookie Based: For all users visting the website.(Public Layout)
+
+  -Session Based: Only for logged in users.(Application Layout)
+  -Cookie Based: For all users visting the website.(Public Layout)
   
 == Installation
 
