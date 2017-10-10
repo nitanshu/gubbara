@@ -1,6 +1,6 @@
 = Gubbara
 
-It helps admin to announce something in a form a notice.It consists two types of announcements:
+It helps admin to announce anything including pasrsed html in a form a notice.It consists two types of announcements:
 
 - Session Based: Only for logged in users.(Application Layout)
 - Cookie Based: For all users visting the website.(Public Layout)
@@ -51,7 +51,7 @@ example: place this in *app/views/layouts/public.html.erb* file.
 
 === Admin Panel
 
-You can access 'Gubbara Admin Panel'.
+You can access Gubbara Admin Panel.
 
 Please ensure that only admin can access this gubbara panel to do that you can use *http_basic_authenticate_with* or some other methods to prevent that url.
 

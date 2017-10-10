@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ['nitanshu1991@gmail.com']
   s.homepage    = 'https://github.com/nitanshu/gubbara'
   s.summary     = 'Gubbara'
-  s.description = 'It helps admin to announce anything to every user in the system in a form of a notice which is configurable also every user has an option to hide it and will not appear till session expires or disabled by admin.'
+  s.description = 'It helps admin to announce anything including pasrsed html in a form a notice.It consists two types of announcements: Session Based: Only for logged in users.(Application Layout), Cookie Based: For all users visting the website.(Public Layout)'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
