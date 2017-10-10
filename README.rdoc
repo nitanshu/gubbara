@@ -78,3 +78,8 @@ When a user clicks on the cross button it hides the template for that session an
 ==== Cookie
 
 When a user clicks on the cross button it hides the template and user will not be able to see that annoucement again on that broswer because cookies are permanent and also the expiry date of cookies are 1 year. 
+
+== Note
+
+There may be the situations that you want to play with the CSS of annoucements so you can play with it.
+Structure of it is like Notices is parent class for all the annoucements.
